@@ -9,7 +9,7 @@
 
 [💻 연관규칙분석 with Python](./연관규칙분석_Python.ipynb)
 
-[💻 연관규칙분석 with R](./연관규칙분석_R.html)
+[💻 연관규칙분석 with R](./연관규칙분석_R.ipynb)
 
 <br>
 
