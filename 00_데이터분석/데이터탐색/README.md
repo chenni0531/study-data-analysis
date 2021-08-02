@@ -4,6 +4,10 @@
 
 [TOC]
 
+[💻 데이터탐색 with R](./데이터탐색_R)
+
+<br>
+
 ## 탐색적 데이터 분석 (EDA)
 
 > Exploratory Data Analysis: process of gaining relevant knowledge about a complex system
