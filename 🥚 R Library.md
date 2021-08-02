@@ -84,3 +84,10 @@ emp%>%
   select(LAST_NAME,SALARY,JOB_ID) 
 ```
 
+
+
+
+
+arules
+
+arulesViz
