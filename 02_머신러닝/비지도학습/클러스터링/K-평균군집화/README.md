@@ -9,7 +9,7 @@
 - K: 데이터 클러스터의 수
 - Means: 각 클러스터에 할당된 데이터와 그 클러스터 중심까지의 평균 거리
 
-![image-20210810215125208](README.assets/image-20210810215125208.png)
+![clustering](README.assets/clustering.jpg)
 
 | **장점**                                                     | **단점**                                                     |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
@@ -51,37 +51,28 @@
 
 <br>
 
-### 1-3. 최적의 K 찾기
+## 2. K 최적화
 
-**Elbow method**: 군집 간의 분산과 전체 분산의 비율을 보고 판단
+### 2-1. Elbow method
+
+군집 간의 분산과 전체 분산의 비율을 보고 판단
 
 - WSS: 군집 내 데이터의 분산 (군집된 데이터와 중심점의 거리를 제곱하여 더한 것)
 
 - TSS: 전체 데이터의 분산 (전체 데이터와 중심점의 거리를 제곱하여 더한 것)
 
+![wsstss](README.assets/wsstss.jpg)
 
+- 군집이 잘 되었다면 WSS가 작아진다
+- Elbow Method가 급격하게 증가하는 지점
 
-
-
-군집이 잘 되었다면 WSS가 작아진다
-
-
-
-<br>
-
-**Sulhouette method**: 데이터와 그 데이터가 속한 군집의 다른 데이터들과의 거리를 계산
-
-- ai: 데이터 i와 i가 속한 군집의 데이터들과의 거리
-
-- bi: 데이터 i와 i가 속하지 않은 다른 군집의 데이터들과의 최소 거리
-
-
+![elbow](README.assets/elbow.jpg)
 
 <br>
 
-### 1-4. 좋은 군집의 기준
+### 2-2. inertia
 
-**inertia**: 각 데이터로부터 자신이 속한 군집의 중심점까지의 거리
+각 데이터로부터 자신이 속한 군집의 중심점까지의 거리
 
 - 군집 내의 데이터들이이 얼마나 퍼져 있는지
 
@@ -94,7 +85,29 @@ inertia 값이 낮을수록 군집화가 잘 된 것
 inertia 값이 급격하게 낮아지는 k의 개수가 적정한 군집의 개수
 ```
 
+<br>
 
+### 2-3. Sulhouette method
+
+데이터가 해당 군집 내 데이터와 얼마나 가깝고 가장 가까운 다른 군집과 얼마나 먼지 나타내는 지표
+
+데이터와 그 데이터가 속한 군집의 다른 데이터들과의 거리를 계산
+
+- 1에 가까우면 좋은 군집: 자신이 속한 군집에 잘 속해 있다
+
+- 0에 가까우면 군집의 경계에 위치했다
+
+- -1에 가까우면 잘못된 클러스터에 할당되었다
+
+![aibi](README.assets/aibi.jpg)
+
+- a(i): 데이터 i와 i가 속한 군집의 데이터들과의 거리
+
+- b(i): 데이터 i와 i가 속하지 않은 다른 군집의 데이터들과의 최소 거리
+
+![silhousette](README.assets/silhousette.jpg)
+
+<br>
 
 ```
 from sklearn.cluster import KMeans
@@ -105,16 +118,6 @@ model.predict(samples)
 print (model.inertia_)
 ```
 
-**실루엣 지표 (silhouette coefficient)**: 데이터가 해당 군집 내 데이터와 얼마나 가깝고 가장 가까운 다른 군집과 얼마나 먼지 나타내는 지표
-
-- 1에 가까우면 좋은 군집: 자신이 속한 군집에 잘 속해 있다
-
-- 0에 가까우면 군집의 경계에 위치했다
-
-- -1에 가까우면 잘못된 클러스터에 할당되었다
-
-
-
 ```'
 # silhouette_sample() 개별 관측치의 실루엣 계수 반환
 # silhouette_score() 실루엣 계수들의 평균
@@ -122,17 +125,13 @@ print (model.inertia_)
 from sklearn.metrics import silhouette_samples, silhuette_score
 ```
 
-![image-20210810214705139](README.assets/image-20210810214705139.png)
-
-![image-20210810214715563](README.assets/image-20210810214715563.png)
-
 <br>
 
 ---
 
 <br>
 
-## 2. K-means++
+## 3. K-means++
 
 일반적인 K-Means의 랜덤한 중심점 설정 문제를 해결하기 위해 생긴 알고리즘
 
@@ -156,7 +155,7 @@ model = KMeans(n_clusters=k,  init='k-means++')
 
 <br>
 
-## 3. k-medoid clustering
+## 4. k-medoid clustering
 
 이상치에 영향을 많이 받는 평균값 대신 중앙값으로 계산
 
