@@ -105,24 +105,6 @@ inertia 값이 급격하게 낮아지는 k의 개수가 적정한 군집의 개�
 
 <br>
 
-```
-from sklearn.cluster import KMeans
-model = KMeans(n_clusters=k)
-model.fit(data)
-model.predict(samples)
-
-print (model.inertia_)
-```
-
-```'
-# silhouette_sample() 개별 관측치의 실루엣 계수 반환
-# silhouette_score() 실루엣 계수들의 평균
-
-from sklearn.metrics import silhouette_samples, silhuette_score
-```
-
-<br>
-
 ---
 
 <br>
@@ -139,11 +121,6 @@ from sklearn.metrics import silhouette_samples, silhuette_score
 
 - 초기 중심점을 보다 전략적으로 설정하므로 K-Means 보다 더 최적의 군집화를 할 수 있다
 - K-Means보다 속도가 빠르다
-
-```
-from sklearn.cluster import KMeans
-model = KMeans(n_clusters=k,  init='k-means++')
-```
 
 <br>
 
