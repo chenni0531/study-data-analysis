@@ -18,6 +18,8 @@
 - 아웃라이어에 Robust하다: 아웃라이어에 대한 저항도 가지고 있고 데이터 특성도 잘 나타낸다
 - 절대값이므로 underperformance인지, overperformance인지 알 수 없다
 
+![mae](README.assets/mae.jpg)
+
 <br>
 
 ## 2. MSE
@@ -28,6 +30,8 @@
 
 - 아웃라이어에  민감하다
 
+![mse](README.assets/mse.jpg)
+
 <br>
 
 ## 3. RMSE
@@ -37,6 +41,8 @@
 MSE는 오류의 제곱을 구하므로 실제 오류 평균보다 커지는 특성
 
 MSE에 루트를 씌운 값
+
+![rmse](README.assets/rmse.jpg)
 
 <br>
 
@@ -50,6 +56,8 @@ RMSE에 로그를 적용한 값
 - 상대적 Error 측정
 - Under Estimation에 큰 패널티: 예측값이 실제값보다 작을 때 패널티
 
+![rmsle](README.assets/rmsle.jpg)
+
 <br>
 
 ## 5. R Square
@@ -59,7 +67,7 @@ RMSE에 로그를 적용한 값
 예측한 모델이 얼마나 실제 데이터를 설명하는지
 
 - scale에 관계 없는 상대적 성능
-
 - 분산 기반으로 예측 성능 평가
-
 - 1에 가까울수록 높은 예측 정확도
+
+![r2](README.assets/r2.jpg)
