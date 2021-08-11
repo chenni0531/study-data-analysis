@@ -1,4 +1,4 @@
-# 시계열 분석
+# 시계열 예측 분석
 
 > Time Series Analysis
 
