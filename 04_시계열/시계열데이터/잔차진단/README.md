@@ -33,6 +33,8 @@
 
 **시간에 따른 상관 정도를 나타내는 통계량**
 
+![자기상관함수](README.assets/자기상관함수.jpg)
+
 **자기상관관계**: 현재의 상태가 과거와 미래에 밀접한 관련이 있는 관계
 
 **자기상관도표 Correlogram**: 자기상관함수와 편자기상관함수 중 하나를 그래프로 표현한 것
@@ -52,17 +54,21 @@
 
 **시차에 따른 자기상관: Zt와 Zt+k사이의 correlation 측정**
 
+![ACF](README.assets/ACF.jpg)
+
 - k가 커짐에 따라 / 시차가 커짐에 따라 ACF(k)값은 작아진다
   - 정상시계열: 빠르게 0에 수렴
   - 비정상시계열: 천천히 감소
 
 <br>
 
-### 2-1. 편자기상관함수
+### 2-2. 편자기상관함수
 
 > Partial Autocorrelation Functio: PACF
 
 **시차에 따른 일련의 편자기상관: Zt와 Zt+k사이의 correlation 측정하되 t와 t+k 사이에 다른 y값들의 영향력을 배제하고 측정**
+
+![PACF](README.assets/PACF.jpg)
 
 - 시차가 다른 두 시계열 데이터의 순수한 상호 연관성
 - 시간의 효과 제거: 시간이 효과인 추세 제거!
@@ -89,22 +95,6 @@ ARIMA 모형의 적분 차수 판단에 사용된다
 
 - P-value가 신뢰수준 값보다 작으면 정상적 시계열 데이터 
 
-
-
-
-![img](https://blog.kakaocdn.net/dn/cmB3bp/btqPZIW8nkx/G7w0qnxG3OsPoGONcxkhi1/img.png)https://en.wikipedia.org/wiki/Augmented_Dickey%E2%80%93Fuller_test
-
-
-
-
-
-![img](https://blog.kakaocdn.net/dn/bDcmfQ/btqP9rs5BuC/ahhU4EOVj520bjOWYAv6N1/img.gif)
-
-
-
-만약 δδ가 1이라면 이는 Unit root를 가지게 되는 것이고, 시간이 지남에 따라 시계열 데이터는 분산이 무한대로 커지게 됩니다. 따라서 위에 정리한 ADF test 검증모형에서 γγ는 0이 되면 시계열 데이터가 비정상성을 가진다고 볼 수 있습니다.
-
-Python에서 statsmodels 패키지를 활용하여 쉽게 ADF Test를 수행할 수 있습니다.
 
 <br>
 
