@@ -16,7 +16,7 @@
 
 ### 1-1. ACF
 
-- 
+- 시차 q+1 이상인 경우부터 0의 값을 가지는 절단형태 
 
 ![MA_ACF](README.assets/MA_ACF.jpg)
 
