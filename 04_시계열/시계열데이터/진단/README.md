@@ -34,7 +34,7 @@ H1: 시계열 데이터가 정상성을 만족한다 (단위근이 존재하지 
 
 ![ADF](README.assets/ADF.jpg)
 
-**KPSS 검정 Kwiatkowski-Philips-Schmidt-Shin**
+**KPSS 검정 Kwiatkowski-Philips-Schmidt-Shin**: 원데이터에 적용
 
 ```
 H0: 시계열 데이터가 추세 정상성을 따른다 (regression='ct') ▶ 추세 제거
@@ -57,7 +57,9 @@ H1: 데이터는 정규분포 형태가 아니다
 
 ### 1-4. 자기상관 검정
 
-**Ljung Box Test**
+> 주어진 데이터의 잔차들이 자기상관성을 갖지 않는다면 정상성 만족
+
+**Ljung Box Test**: 잔차 검정
 
 ```
 H0: 시계열 데이터의 자기상관이 존재하지 않는다 (자기상관계수 = 0)
