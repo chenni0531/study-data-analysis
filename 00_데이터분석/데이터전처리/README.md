@@ -177,3 +177,10 @@
 - 래퍼 방법 Wrapper Method: 변수의 일부만 모델링에 사용하고 그 결과를 확인하는 작업을 반복하면서 변수를 택해나가는 방법
 
 - 임베디드 방법 Embedded Method: 모델 자체에 변수 선택이 포함된 경우 (LASSO)
+
+
+
+
+
+https://eunsukimme.github.io/ml/2019/10/20/Normalization/
+
