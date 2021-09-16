@@ -360,3 +360,4 @@ loss를 최소화하는 최적의 기울기와 절편을 구하는 방법
 **Cook's dist vs Leverage**
 
 ![image-20210706235823326](README.assets/image-20210706235823326.png)
+
