@@ -11,6 +11,8 @@
 
 - 계수 추정치를 제한(constrains)하거나 규칙화(regularizes)하는 기법
 
+![정규화](README.assets/정규화.png)
+
 <br>
 
 일반적인 선형 회귀 방법: 최소자승법(Least Squares Method)을 통해 종속변수의 실제값과 모델의 예측값 사이의 평균제곱오차(Mean Square Error)를 최소화하는 회귀계수
@@ -108,7 +110,7 @@
 - 추정할 계수의 절대값을 더한 값이 최고가 되는 값
 - `λ가 커지는 것 = t가 작아지는 것`
 
-| ![image-20210918162122452](README.assets/image-20210918162122452.png) | ![img](http://www.datamarket.kr/xe/files/attach/images/127/176/007/9b3cd0ce8fae5392cd6b3b6829b7602c_1.PNG) |
+| ![image-20210918162122452](README.assets/image-20210918162122452.png) | ![img](http://www.datamarket.kr/xe/files/attach/images/127/176/007/b6b7543bfc0abb3cbb1d66eadb340ff9.PNG) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 
 <br>![img](https://blog.kakaocdn.net/dn/th9YW/btq3mdXeMLY/IFCQaLpJYdAYezWAzYzWtk/img.png)
